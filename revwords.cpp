@@ -5,8 +5,10 @@ using namespace std;
   index end.Just swap the characters from the beginning of the
   substring with characters at the end until we meet in the middle
 */
-void ReverseSubstring(char str[], int start, int end) {
-	while (start < end) {
+void ReverseSubstring(char str[], int start, int end) 
+{
+	while (start < end) 
+	{
 		char temp = str[start];
 		str[start] = str[end];
 		str[end] = temp;
@@ -23,14 +25,14 @@ void ReverseSubstring(char str[], int start, int end) {
 */
 int FindNextStart(char str[], int length, int i)
 {
-	while (i < length && !isalpha(str[i]))
+    while (i < length && !isalpha(str[i]))
     {
         i++;
     }
     /*If we found a word,return its start index,otherwise
     return -1
     */
-	return (i < length) ? i : -1;
+    return (i < length) ? i : -1;
 }
 /*This function finds the end of the current word starting
   at position i. The end of a word is defined as the first
